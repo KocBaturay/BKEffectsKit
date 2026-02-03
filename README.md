@@ -4,23 +4,23 @@ A specialized SwiftUI library for high-performance visual effects, custom animat
 
 ---
 
-## ✨ Features
+## Features
 
-### 🌀 Loading Animations
+### Loading Animations
 - **Waiting Dots**: A fluid, bouncing dot sequence for subtle wait states.
 - **Loading Orb**: A glowing, pulsing orb effect with customizable blur and scale.
 - **Wave Grid**: A grid of shapes that animate in a wave-like pattern—perfect for skeleton screens or data fetching.
 
-### 🌌 Background Effects
+### Background Effects
 - **Starfall**: A dynamic particle system that simulates stars falling through space. Optimized for battery efficiency and high frame rates.
 
-### ⌨️ Text Effects
+### Text Effects
 - **Hacker Text**: Randomized character cycling that "decodes" into your target string.
 - **Numeric Transition**: Smoothly animates numbers rolling up or down (ideal for prices or scores).
 - **Cycle Texts**: A vertical or cross-fade rotation through a list of strings.
 - **Typer Text**: A classic typewriter animation with a customizable cursor.
 
-### 🎨 Visual & Metal Effects
+### Visual & Metal Effects
 - **GlowHue**: Adds a cycling, neon-like glow to any SwiftUI view.
 - **Shimmer**: A premium "shining" overlay for loading states or call-to-action buttons.
 - **Transparent Blur**: A high-performance frosted glass effect with adjustable vibrancy.
@@ -29,10 +29,11 @@ A specialized SwiftUI library for high-performance visual effects, custom animat
 ---
 
 ## Installation
+
 Swift Package Manager (SPM)
 In Xcode, go to File > Add Packages...
 
-Enter the repository URL: [https://github.com/FallikTheCat/BKCustomComponentsKit](https://github.com/FallikTheCat/BKEffectsKit)
+Enter the repository URL: [https://github.com/FallikTheCat/BKEffectsKit](https://github.com/FallikTheCat/BKEffectsKit)
 
 Select Up to Next Major Version and click Add Package.
 
@@ -41,19 +42,27 @@ Select Up to Next Major Version and click Add Package.
 ## Usage Examples
 
 ### Loading Animations
-![](Resources_Effects/loading.gif)
 
 - **Waiting Dots**
+  
+![](Resources_Effects/dots.gif)
+
 ```swift
 WaitingDotsAnimationView(dotCount: 3, dotColor: .black, dotSize: 15, animationDuration: 0.5)
 ```
 
 - **Loading Orbs**
+
+![](Resources_Effects/orbs.gif)
+
 ```swift
 LoadingOrbAnimation(size: 45, color: .orange, speed: 1.75, glowOpacity: 1)
 ```
 
 - **Wave Grid**
+
+![](Resources_Effects/wave.gif)
+
 ```swift
 WaveGridAnimation(rows: 4, columns: 4, nodeColor: .black, lineColor: .orange.opacity(0.2), nodeSize: 4, spacing: 10)
 ```
@@ -61,25 +70,33 @@ WaveGridAnimation(rows: 4, columns: 4, nodeColor: .black, lineColor: .orange.opa
 ### Text Effects
 
 - **Hacker Effect**
+
 ![](Resources_Effects/hacker.gif)
+
 ```swift
 HackerTextEffect(text: "Hacker Effect", trigger: trigger, transition: .identity, duration: 3, speed: 0.06)
 ```
 
 - **Numeric Transition**
+  
 ![](Resources_Effects/numeric.gif)
+
 ```swift
 NumericTransitionEffect(value: $number, font: .title3.bold(), color: .black)
 ```
   
 - **Text Cycler**
+  
 ![](Resources_Effects/slide.gif)
+
 ```swift
 TextCyclerEffect(messages: messages, cycleDuration: 2.5)
 ```
 
 - **Typer Effect**
+  
 ![](Resources_Effects/typer.gif)
+
 ```swift
 TyperEffect(text: "Typer Effect", interval: 0.2)
 ```
@@ -87,7 +104,9 @@ TyperEffect(text: "Typer Effect", interval: 0.2)
 ### Visual Effects
 
 - **Glow Hue Effect**
+  
 ![](Resources_Effects/glow.gif)
+
 ```swift
 .glowHueEffect(
     color: Color.orange,
@@ -99,7 +118,9 @@ TyperEffect(text: "Typer Effect", interval: 0.2)
 ```
 
 - **Shimmer Effect**
+  
 ![](Resources_Effects/shimmer.gif)
+
 ```swift
 ZStack {
     RoundedRectangle(cornerRadius: 60)
@@ -126,7 +147,9 @@ ZStack {
 ```
 
 - **Transparent Blur Effect**
+  
 ![](Resources_Effects/transparentblur.gif)
+
 ```swift
 TransparentBlurEffect(removeAllFilters: false)
   .blur(radius: 24)
